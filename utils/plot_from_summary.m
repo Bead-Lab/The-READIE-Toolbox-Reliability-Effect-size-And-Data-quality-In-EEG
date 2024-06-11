@@ -23,13 +23,6 @@ for i=1:length(conditions)
     end
     % cond_mask = arrayfun(@(x) contains(lower(x{:}), lower(conditions(i))), summary_table.cond_s);
     sub_summ = summary_table(cond_mask,:);
-<<<<<<< HEAD
-    errorbar(values_sequence, sub_summ.mean, errors_lower(cond_mask), errors_upper(cond_mask), ...
-        'o-', 'LineWidth', 1, 'DisplayName', conditions(i), 'Color', colors(c, :));
-    c = c + 1;
-    hold on;
-end
-=======
     if length(conditions) > length(colors)
         errorbar(values_sequence, sub_summ.mean, errors_lower(cond_mask), errors_upper(cond_mask), ...
             'o-', 'LineWidth', 1, 'DisplayName', conditions(i));
@@ -43,17 +36,11 @@ end
 end
 
 c = 1;
->>>>>>> b180b23 (Updated user manual with examples)
 if lower(mode) ~= "reliability" && lower(mode) ~= "rel"
     for i=1:length(comb_conds)
         cond_mask = contains(summary_table.cond_s, comb_conds(i));
         % cond_mask = arrayfun(@(x) contains(lower(x{:}), lower(conditions(i))), summary_table.cond_s);
         sub_summ = summary_table(cond_mask,:);
-<<<<<<< HEAD
-        errorbar(values_sequence, sub_summ.mean, errors_lower(cond_mask), errors_upper(cond_mask), ...
-            'o-', 'LineWidth', 1, 'DisplayName', comb_conds(i), 'Color', colors(c, :));
-        c = c + 1;
-=======
         if length(comb_conds) > length(colors)
             errorbar(values_sequence, sub_summ.mean, errors_lower(cond_mask), errors_upper(cond_mask), ...
                 'o-', 'LineWidth', 1, 'DisplayName', comb_conds(i));
@@ -62,8 +49,6 @@ if lower(mode) ~= "reliability" && lower(mode) ~= "rel"
                 'o-', 'LineWidth', 1, 'DisplayName', comb_conds(i), 'Color', colors(c, :));
             c = c + 1;
         end
-        
->>>>>>> b180b23 (Updated user manual with examples)
         hold on;
     end
 end

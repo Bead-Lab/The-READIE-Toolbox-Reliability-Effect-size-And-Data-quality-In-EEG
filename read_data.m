@@ -1,21 +1,13 @@
 function all_data = read_data(data_folder, subj_divider, ignore_contains, conditions, value_columns)
 
 all_data = table();
-<<<<<<< HEAD
-files = dir(fullfile(data_folder,'*.csv'));
-=======
 files = dir(fullfile(data_folder,'**/*.csv'));
->>>>>>> b180b23 (Updated user manual with examples)
 n_read = 0;
 n_skip = 0;
 parfor i = 1:length(files)
     baseFileName = lower(files(i).name);
-<<<<<<< HEAD
-    fullFileName = fullfile(data_folder, baseFileName);
-=======
     % fullFileName = fullfile(data_folder, baseFileName);
     fullFileName = fullfile(files(i).folder, files(i).name);
->>>>>>> b180b23 (Updated user manual with examples)
     split_arr = split(baseFileName, lower(subj_divider)); 
     subj = convertCharsToStrings(split_arr{1});
 
@@ -29,11 +21,6 @@ parfor i = 1:length(files)
     n_read = n_read + 1;
     
     data = readtable(fullFileName,'PreserveVariableNames', true, 'Delimiter', ',');
-<<<<<<< HEAD
-    % removes rows from the data table where the text in the 'Row' column
-    % contains the word "average" (HAPPE Output)
-=======
->>>>>>> b180b23 (Updated user manual with examples)
     trial_mask = arrayfun(@(x) ~contains(lower(x{:}), "average"), data{:,'Row'});
     data = data(trial_mask,:);
 

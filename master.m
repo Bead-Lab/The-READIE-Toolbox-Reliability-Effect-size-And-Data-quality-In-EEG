@@ -8,13 +8,13 @@ General Parameters
 %}
 
 % Define directory paths for data and results
-SAVE_ROOT = '/Users/macbook/Desktop/Paper_Data/12M_Results_newcode';
-DATA_FOLDER = '/Users/macbook/Desktop/Paper_Data/12M_SA_VEP_txt_Files/generateERPs/ERP_calculatedVals';
+SAVE_ROOT = '/Users/macbook/Desktop/Reliability_Project_Scripts/READIE_Toolbox_0501/results';
+DATA_FOLDER = '/Users/macbook/Desktop/Reliability_Project_Scripts/READIE_Toolbox_0501/ERP_calculateVals_data';
 
 % Extract participant name from file names using the specified divider
 % e.g., for "2_191_49685484_3_20220901_110819_generatedERPvals_27-02-2024.csv",
 % participant name is "2_191_49685484_3_20220901_110819"
-FILENAME_DIVIDER = "_generatedERPvals";
+FILENAME_DIVIDER = "_generatedERPVals";
 
 % Specify exclusion files 
 IGNORE_CONTAINS = [
@@ -25,26 +25,26 @@ IGNORE_CONTAINS = [
 % Define ALL conditions present in the dataset
 % If the dataset only contains one condition, leave CONDITIONS blank
 CONDITIONS = [
-    % "resp", "stm", ...
+    % "_Beta_", "_Delta_","_Gamma_","HighAlpha","LowAlpha","Theta" ...
     ];
 
 % Specify the time windows of interest for data analysis
 VALUE_COLUMNS = [
-    "Mean Amplitude for Window 75-175", ...
-    % "Mean Amplitude for Window 100-325", ...
+    "Mean Amplitude for Window 100-230"
+    "Mean Amplitude for Window 75-130", ...
     ];
 
 %{
 SME, reliability, and effect size iteration parameters
 %}
-NUM_ITERATIONS = 3000;
+NUM_ITERATIONS = 300;
 
 %{
 Reliability parameters(Trial-level) 
 %}
 N_FROM = 10;
-N_TO = 100;
-N_BY = 5;
+N_TO = 90;
+N_BY = 10;
 
 
 %{
