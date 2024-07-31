@@ -28,7 +28,7 @@ lapply(list.of.packages, require, character.only = TRUE)
 
 # Setting suggested plotting options
 my_opts <- list(theme_classic() + theme(axis.text=element_text(size=14), axis.title=element_text(size=15,face="bold"), legend.title=element_text(size=14,face="bold"), legend.text=element_text(size=13), strip.text.x = element_text(size = 14, face="bold")))
-setwd("") # Update this part to your working directory 
+setwd("...READIE_Toolbox_0611/results") # Update this part to READIE Output Results Folder 
 
 ############################################################
 ```
