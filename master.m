@@ -8,13 +8,13 @@ General Parameters
 %}
 
 % Define directory paths for data and results
-SAVE_ROOT = '/Users/macbook/Desktop/Reliability_Project_Scripts/READIE_Toolbox_0730/results';
-DATA_FOLDER = '/Users/macbook/Desktop/Reliability_Project_Scripts/READIE_Toolbox_0730/ERP_calculateVals_data';
+SAVE_ROOT = '/Users/macbook/Desktop/Reliability_Project_Scripts/READIE_Toolbox_0806/results';
+DATA_FOLDER = '/Users/macbook/Desktop/Reliability_Project_Scripts/READIE_Toolbox_0806/Preprocessed_Individual_trial_data_readieERP/readieERPs/ERP_calculatedVals';
 
 % Extract participant name from file names using the specified divider
 % e.g., for "2_191_49685484_3_20220901_110819_generatedERPvals_27-02-2024.csv",
 % participant name is "2_191_49685484_3_20220901_110819"
-FILENAME_DIVIDER = "_generatedERPVals";
+FILENAME_DIVIDER = "_readieERPvals";
 
 % Specify exclusion files 
 IGNORE_CONTAINS = [
