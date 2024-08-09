@@ -108,7 +108,9 @@ for currfile=1:size(FileNames, 2)+1
         try
             % LOAD FILE
             if strcmpi(params.format, '1'); currsub = importdata(FileNames{currfile}) ;
-            elseif strcmpi(params.format, '2'); currsub = load('-mat', FileNames{currfile}) ;
+            elseif strcmpi(params.format, '2')
+                currsub = pop_loadset('filename', FileNames{currfile}, ...
+                    'filepath', srcDir) ;
             end
     
             % COMPILE LIST OF BAD CHANNELS
